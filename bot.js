@@ -26,7 +26,7 @@ client.on('ready', () => {
   console.log('')
   console.log('')
 
-  
+  });
   
 
 
@@ -34,15 +34,15 @@ client.on('ready', () => {
  
  
 
-var prefix = "-"
+var prefix = "A"
 client.on('message', function(message) {
-    const myID = "505761472232816641";
+    const myID = "292921035060281354";
    let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(prefix + "setname")) {
                 if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client.user.setUsername(args);
-        message.channel.send('**SetName,Done!**').then(msg => {
+        message.channel.send('**Your Status** : `Setname`').then(msg => {
            msg.delete(500);
           message.delete(500);
         });
@@ -81,7 +81,7 @@ client.on('message', function(message) {
     } else if(message.content.startsWith(prefix + "setavatar")) {
                         if(message.author.id !== myID) return;
         client.user.setAvatar(args);
-        message.channel.send(':white_check_mark: Done!').then(msg => {
+        message.channel.send(':white_check_mark: **Your Status** ').then(msg => {
                 if(!args) return message.reply('اكتب الحالة اللي تريدها.');
            msg.delete(500);
           message.delete(500);
